@@ -326,7 +326,7 @@ public class CassandraStatement extends AbstractStatement implements CassandraSt
 
     public boolean getMoreResults() throws SQLException
     {
-        checkNotClosed();
+        //checkNotClosed();
         resetResults();
         // in the current Cassandra implementation there are never MORE results
         return false;
@@ -335,7 +335,7 @@ public class CassandraStatement extends AbstractStatement implements CassandraSt
     @SuppressWarnings("boxing")
 	public boolean getMoreResults(int current) throws SQLException
     {
-        checkNotClosed();
+        //checkNotClosed();
 
         switch (current)
         {
@@ -387,7 +387,7 @@ public class CassandraStatement extends AbstractStatement implements CassandraSt
 
     public int getUpdateCount() throws SQLException
     {
-        checkNotClosed();
+        //checkNotClosed();
         return updateCount;
     }
 
